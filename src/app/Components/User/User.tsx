@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import UserSingle from "./UserSingle";
 import { IUser } from "../../type";
 import { Element } from "react-scroll";
+import { motion } from 'framer-motion';
 
 const User = () => {
   const [user, setUser] = useState<IUser>();
@@ -12,7 +13,11 @@ const User = () => {
   }, [user?.id]);
   return (
     <Element name="partners">
-    <div className="container py-16" >
+    <motion.div 
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ duration: 1 }}
+    className="container py-16" >
       <h1 className="mt-16 mb-8 text-3xl font-semibold mb-text-3xl md:mb-12 md:text-5xl text-primary-300">
         Connect With Our Partners
       </h1>
@@ -27,7 +32,7 @@ const User = () => {
               />
             ))}
       </div>
-    </div>
+    </motion.div>
     </Element>
   );
 };
