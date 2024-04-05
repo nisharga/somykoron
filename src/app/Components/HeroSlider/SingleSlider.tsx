@@ -5,7 +5,7 @@ import RoundedBtn from "../../Pages/Components/RoundedBtn/RoundedBtn";
 const SingleSlider = ({ data }: any) => {
   return (
     <div className="container">
-      <div className="w-full text-gray-800 rounded-xl bg-primary-500">
+      <div className="w-full text-gray-800 rounded-xl bg-primary-300">
         <div className="grid grid-cols-12">
           <div className="col-span-12 p-12 lg:col-span-6">
             <div className="flex flex-col justify-center items-center min-h-[480px]">

@@ -1,11 +1,11 @@
-import { Contact, TheHeader } from "../../Components";
-import { HeroSlider } from "../../Components/HeroSlider";
+import { Adds, Contact, HeroSlider, User } from "../../Components";
 
 const HomePage = () => {
   return (
     <div>
-      <TheHeader />
       <HeroSlider />
+      <User />
+      <Adds />
       <Contact />
     </div>
   );

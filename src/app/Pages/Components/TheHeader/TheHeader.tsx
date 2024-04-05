@@ -1,7 +1,7 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Menu } from "../../static";
+import { Menu } from "../../../static";
 
 const TheHeader = () => {
   const [isShowMobileMenu, setIsShowMobileMenu] = useState(false);
