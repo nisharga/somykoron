@@ -1,16 +1,17 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 const Contact = () => {
-    const handleSubmit = (e: any) => {
-        const name = e.target.name.value;
-        const email = e.target.email.value;
-        const message = e.target.message.value;
-        alert(name + email + message);
-        e.preventDefault();
-    }
+  const handleSubmit = (e: any) => {
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const howKnow = e.target.howKnow.value;
+    const message = e.target.message.value;
+    alert(`Name: ${name}, Email: ${email}, Came From: ${howKnow}, Message: ${message}`);
+    e.preventDefault();
+  };
   return (
     <div>
-      <section className="bg-primary-500 text-success">
+      <section className="bg-primary-300 text-success">
         <div className="container px-5 py-24 mx-auto ">
           <div className="flex flex-col w-full mb-12 text-center">
             <h1 className="mb-4 text-2xl font-medium text-success sm:text-3xl">
@@ -55,6 +56,23 @@ const Contact = () => {
                 </div>
               </div>
               <div className="w-full p-2">
+                <label
+                  htmlFor="email"
+                  className="text-sm leading-7 text-success"
+                >
+                  How You Know About Us
+                </label>
+                <select
+                  className="w-full px-3 py-2 text-base leading-8 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none text-primary-300 focus:border-success focus:ring-2 focus:ring-indigo-200"
+                  name="howKnow"
+                >
+                  <option value="">Select an option</option>
+                  <option value="facebook">Facebook</option> 
+                  <option value="google">Google</option> 
+                  <option value="linkedin">Linkedin</option> 
+                </select>
+              </div>
+              <div className="w-full p-2">
                 <div className="relative">
                   <label
                     htmlFor="message"
@@ -70,7 +88,10 @@ const Contact = () => {
                 </div>
               </div>
               <div className="w-full p-2">
-                <button className="flex px-8 py-2 mx-auto text-lg text-white bg-indigo-500 border-0 rounded focus:outline-none hover:bg-indigo-600" type="submit">
+                <button
+                  className="flex px-8 py-2 mx-auto text-lg text-white bg-indigo-500 border-0 rounded focus:outline-none hover:bg-indigo-600"
+                  type="submit"
+                >
                   Submit
                 </button>
               </div>

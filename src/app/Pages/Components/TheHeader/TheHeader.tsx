@@ -2,6 +2,8 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Menu } from "../../../static";
+import { Icons } from "../Icon";
+import { TheLogo } from "../TheLogo";
 
 const TheHeader = () => {
   const [isShowMobileMenu, setIsShowMobileMenu] = useState(false);
@@ -21,7 +23,7 @@ const TheHeader = () => {
         {/* larger device menu */}
 
         <div className="items-center justify-between hidden px-4 py-2 backdrop-blur-sm lg:flex">
-          <div className="">Logo</div>
+          <TheLogo />
           <AnimatePresence>
             <motion.div
               className="flex items-center justify-end gap-6"
@@ -46,12 +48,12 @@ const TheHeader = () => {
       {!isShowMobileMenu ? (
         <div className="container sticky top-0 z-50 flex items-center justify-between h-16 rounded-full bg-primary-500 lg:hidden backdrop-blur-sm">
           <div></div>
-          Logo
+          <TheLogo />
           <button
             onClick={() => setIsShowMobileMenu(true)}
             className="no-underline rounded-md"
           >
-            {/* <Icons.Hamburger className="fill-white" /> */} Ham
+            <Icons.Hamburger className="fill-white" /> 
           </button>
         </div>
       ) : (
@@ -59,12 +61,12 @@ const TheHeader = () => {
           <div className="">
             <div className="container flex items-center justify-between h-16 bg-primary-500 lg:hidden backdrop-blur-sm border-b-[2px]">
               <div></div>
-              {/* <Logo className="!h-10 !w-auto" /> */}Logo
+              <TheLogo />
               <button
                 onClick={() => setIsShowMobileMenu(false)}
                 className="no-underline rounded-md"
               >
-                {/* <Icons.X className="fill-white" /> */} X
+                <Icons.X className="fill-white" />
               </button>
             </div>
             <AnimatePresence>

@@ -6,29 +6,17 @@ export const Menu = [
     },
     {
         id: 2,
-        label: 'ABOUT',
-        route: '/about-us'
+        label: 'PARTNERS',
+        route: '/#partners'
     },
     {
         id: 3,
-        label: 'COURSES',
-        route: '/'
+        label: 'WHY WE BEST',
+        route: '/#whywebest'
     },
     {
-        id: 4,
-        label: 'SHOP',
-        route: '/'
-    },
-    {
-        id: 5,
-        label: 'EVENTS',
-        route: '/',
-        isButton: true
-    },
-    {
-        id: 6,
+        id: 3,
         label: 'CONTACT',
-        route: '/',
-        isButton: true
-    }
+        route: '/#contact'
+    },
 ];
