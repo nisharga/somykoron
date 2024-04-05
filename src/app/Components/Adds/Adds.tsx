@@ -1,9 +1,11 @@
 import RoundedBtn from "./../../Pages/Components/RoundedBtn/RoundedBtn";
 import RoundedBtnFull from "../../Pages/Components/RoundedBtnFull/RoundedBtnFull";
+import { Element } from "react-scroll";
 
 const Adds = () => {
   return (
-    <div className="mb-12">
+    <Element name="whywebest">
+    <div className="pt-28">
       <div className="hidden md:block">
         <div className="container">
           <div className="relative">
@@ -53,6 +55,7 @@ const Adds = () => {
         </div>
       </div>
     </div>
+    </Element>
   );
 };
 

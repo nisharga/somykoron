@@ -6,6 +6,7 @@ import SingleSlider from "./SingleSlider";
 import { useRef } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Element } from "react-scroll";
 
  
 
@@ -37,13 +38,15 @@ const HeroSlider = () => {
   const sliderRef = useRef(null); // type: <Slider | null>
 
   return (
-    <div className="py-6 slider">
+    <Element name="home">
+    <div className="pt-10 slider">
       <Slider ref={sliderRef} {...settings}>
         {HeroSliderData?.map((data: any, index: number) => (
           <SingleSlider data={data} key={index} />
         ))}
       </Slider>
     </div>
+    </Element>
   );
 };
 

@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
+import { Element } from "react-scroll";
+
 const Contact = () => {
   const handleSubmit = (e: any) => {
     const name = e.target.name.value;
@@ -10,7 +12,8 @@ const Contact = () => {
     e.preventDefault();
   };
   return (
-    <div>
+    <Element name="contact">
+    <div className="mt-28">
       <section className="bg-primary-300 text-success">
         <div className="container px-5 py-24 mx-auto ">
           <div className="flex flex-col w-full mb-12 text-center">
@@ -100,6 +103,7 @@ const Contact = () => {
         </div>
       </section>
     </div>
+    </Element>
   );
 };
 

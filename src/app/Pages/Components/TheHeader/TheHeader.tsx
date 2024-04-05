@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Menu } from "../../../static";
 import { Icons } from "../Icon";
 import { TheLogo } from "../TheLogo";
+import { Link } from 'react-scroll';
 
 const TheHeader = () => {
   const [isShowMobileMenu, setIsShowMobileMenu] = useState(false);
@@ -31,13 +32,15 @@ const TheHeader = () => {
               animate={{ opacity: 1 }}
             >
               {Menu.map(({ id, route, label }) => (
-                <a
+                <Link
                   className={`whitespace-nowrap transition-colors duration-300 text-success px-3 py-1.5 md:py-2.5 hover:bg-primary-300 hover:rounded-md`}
                   key={id}
-                  href={route}
+                  to={route}
+                  smooth={true} duration={500}
                 >
                   {label}
-                </a>
+                </Link>
+                
               ))}
             </motion.div>
           </AnimatePresence>
@@ -76,10 +79,12 @@ const TheHeader = () => {
                 animate={{ opacity: 1 }}
               >
                 {Menu.map(({ id, route, label }) => (
-                  <a
+                  <Link
                     className="px-12 text-gray-200 transition-all bg-primary-500 hover:bg-primary-300 py-7 whitespace-nowrap"
                     key={id}
-                    href={route}
+                    to={route}
+                    smooth={true} 
+                    duration={500}
                     onClick={() =>
                       setTimeout(() => {
                         setIsShowMobileMenu(false);
@@ -87,7 +92,7 @@ const TheHeader = () => {
                     }
                   >
                     {label}
-                  </a>
+                  </Link>
                 ))}
               </motion.div>
             </AnimatePresence>
